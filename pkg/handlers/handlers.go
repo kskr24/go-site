@@ -7,10 +7,10 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	log.Println("Hello")
-	render.RenderTemplate(w, "home.page.html")
+	log.Println(r)
+	render.RenderTemplate(w, "home.page.tmpl")
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "about.page.html")
+	render.RenderTemplate(w, "about.page.tmpl")
 }
